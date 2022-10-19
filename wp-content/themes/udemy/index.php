@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -11,3 +15,7 @@
     <p>Helooo World!</p>
 </body>
 </html>
+
+<?php
+
+?>
