@@ -80,7 +80,10 @@
           "color": "rgb(236 72 153)",
           "name": "Udemy Danger"
         }
-      ]
+      ],
+      "background": true,
+      "text": true,
+      "link": true
     },
     "blocks": {
       "core/site-title": {
