@@ -116,7 +116,9 @@
             }
           ],
           "link": true,
-          "custom": false
+          "custom": false,
+          "gradients": [],
+          "customGradient": false
         }
       },
       "core/cover": {
