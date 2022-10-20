@@ -8,7 +8,7 @@ $charset = get_bloginfo( 'charset' );
         <meta charset="<?= $charset ?>">
 		<?php wp_head(); ?>
     </head>
-    <body>
+    <body <?php body_class('example')?>>
     <p>Helooo World!</p>
 
 	<?php wp_footer(); ?>
