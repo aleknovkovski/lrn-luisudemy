@@ -94,6 +94,14 @@
           ],
           "name": "Udemy Pink Sunset"
         }
+      ],
+      "defaultGradients": false,
+      "gradients": [
+        {
+          "slug": "u-summer-dog",
+          "name": "Udemy Summer Dog",
+          "gradient": "linear-gradient(#a8ff78, #78ffd6)"
+        }
       ]
     },
     "blocks": {
