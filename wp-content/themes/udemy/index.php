@@ -9,6 +9,8 @@ $charset = get_bloginfo( 'charset' );
 		<?php wp_head(); ?>
     </head>
     <body <?php body_class('example')?>>
+    <?php wp_body_open(); ?>
+
     <p>Helooo World!</p>
 
 	<?php wp_footer(); ?>
