@@ -152,6 +152,14 @@
         "color": {
           "gradient":"var(--wp--preset--gradient--u-summer-dog)"
         }
+      },
+      "core/pullquote": {
+        "border": {
+          "width": "2px",
+          "radius": "10px",
+          "style": "solid",
+          "color": "var(--wp--preset--color--u-primary)"
+        }
       }
     }
   }
