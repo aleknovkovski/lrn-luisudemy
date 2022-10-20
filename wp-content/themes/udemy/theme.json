@@ -95,7 +95,8 @@
               "color": "#ef4444",
               "name": "Udemy Primary"
             }
-          ]
+          ],
+          "link": true
         }
       }
     }
