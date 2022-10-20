@@ -110,6 +110,12 @@
           "link": true,
           "custom": false
         }
+      },
+      "core/cover": {
+        "color": {
+          "duotone": [],
+          "customDuotone": false
+        }
       }
     }
   }
