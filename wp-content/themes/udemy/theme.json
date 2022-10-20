@@ -83,7 +83,8 @@
       ],
       "background": true,
       "text": true,
-      "link": true
+      "link": true,
+      "custom": true
     },
     "blocks": {
       "core/site-title": {
@@ -96,7 +97,8 @@
               "name": "Udemy Primary"
             }
           ],
-          "link": true
+          "link": true,
+          "custom": false
         }
       }
     }
