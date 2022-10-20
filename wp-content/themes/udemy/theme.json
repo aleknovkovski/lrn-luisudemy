@@ -131,7 +131,8 @@
   },
   "styles": {
     "color": {
-      "text": "var(--wp--preset--color--u-gray-700)"
+      "text": "var(--wp--preset--color--u-gray-700)",
+      "background": "var(--wp--preset--color--u-white)"
     }
   }
 }
