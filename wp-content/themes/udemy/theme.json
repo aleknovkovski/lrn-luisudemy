@@ -227,6 +227,11 @@
           "style": "solid",
           "color": "var(--wp--preset--color--u-primary)"
         }
+      },
+      "core/site-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--u-pacifico)"
+        }
       }
     }
   }
