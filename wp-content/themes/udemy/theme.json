@@ -156,6 +156,7 @@
     "spacing": {
       "margin": true,
       "padding": true,
+      "blockGap": true,
       "units": [
         "px",
         "rem",
@@ -241,7 +242,8 @@
         "bottom": "0px",
         "left": "0px",
         "right": "0px"
-      }
+      },
+      "blockGap": "4rem"
     },
     "blocks": {
       "core/button": {
