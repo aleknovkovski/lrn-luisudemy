@@ -104,6 +104,15 @@
         }
       ]
     },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "Rubik, sans-serif",
+          "slug": "u-rubik",
+          "name": "Udemy Rubik"
+        }
+      ]
+    },
     "blocks": {
       "core/site-title": {
         "color": {
@@ -142,15 +151,6 @@
       "radius": true,
       "style": true,
       "width": true
-    },
-    "typography": {
-      "fontFamilies": [
-        {
-          "fontFamily": "Rubik, sans-serif",
-          "slug": "u-rubik",
-          "name": "Udemy Rubik"
-        }
-      ]
     }
   },
   "styles": {
