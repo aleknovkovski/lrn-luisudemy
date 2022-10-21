@@ -218,6 +218,20 @@
       "textDecoration": "none",
       "textTransform": "none"
     },
+    "spacing": {
+      "margin": {
+        "top": "0px",
+        "bottom": "0px",
+        "left": "0px",
+        "right": "0px"
+      },
+      "padding": {
+        "top": "0px",
+        "bottom": "0px",
+        "left": "0px",
+        "right": "0px"
+      }
+    },
     "blocks": {
       "core/button": {
         "color": {
