@@ -138,7 +138,14 @@
           "size": "3.75rem",
           "name": "Gigantic"
         }
-      ]
+      ],
+      "lineHeight": true,
+      "dropCap": true,
+      "fontWeight": true,
+      "fontStyle": true,
+      "textTransform": true,
+      "letterSpacing": true,
+      "textDecoration": true
     },
     "border": {
       "color": true,
