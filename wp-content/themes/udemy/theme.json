@@ -177,6 +177,12 @@
           "duotone": [],
           "customDuotone": false
         }
+      },
+      "core/preformatted": {
+        "typography": {
+          "fontSizes": [],
+          "customFontSize": false
+        }
       }
     }
   },
