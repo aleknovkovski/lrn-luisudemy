@@ -153,6 +153,17 @@
       "style": true,
       "width": true
     },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "units": [
+        "px",
+        "rem",
+        "vh",
+        "vw",
+        "%"
+      ]
+    },
     "layout": {
       "contentSize": "800px",
       "wideSize": "1100px"
