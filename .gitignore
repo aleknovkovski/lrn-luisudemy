@@ -1,10 +1,17 @@
+# ignore everything in current directory
+/*
+
+# !pattern now negates the "ignore everything" and keeps 'pattern'
+
+# keep .gitignore
+!.gitignore
+!wp-content/
+
+# custom removals
 /wp-admin/
 /wp-includes/
 /wp-content/plugins/gutenberg/
 /wp-content/plugins/fakerpress/
-
-# ignore everything in the root except the "wp-content" directory.
-!wp-content/
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
