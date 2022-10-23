@@ -1,6 +1,7 @@
 /wp-admin/
 /wp-includes/
 /wp-content/plugins/gutenberg/
+/wp-content/plugins/fakerpress/
 
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
@@ -25,4 +26,5 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+
 
