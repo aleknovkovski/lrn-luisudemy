@@ -6,6 +6,11 @@
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/twentytwenty" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/twentytwentyone" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/twentytwentytwo" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/gutenberg" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/upgrade" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/uploads" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-admin" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-includes" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
