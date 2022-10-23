@@ -5,6 +5,7 @@
 
 # keep .gitignore
 !.gitignore
+!readme.md
 !wp-content/
 
 # custom removals
