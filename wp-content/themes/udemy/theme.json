@@ -218,6 +218,9 @@
       "link": {
         "color": {
           "text": "var(--wp--preset--color--u-primary)"
+        },
+        "typography": {
+          "textDecoration": "none"
         }
       }
     },
