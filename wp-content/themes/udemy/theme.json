@@ -6,6 +6,11 @@
       "defaultPalette": false,
       "palette": [
         {
+          "slug": "u-white",
+          "color": "rgb(255 255 255)",
+          "name": "Udemy White"
+        },
+        {
           "slug": "u-gray-100",
           "color": "rgb(243 244 246)",
           "name": "Udemy Gray 100"
