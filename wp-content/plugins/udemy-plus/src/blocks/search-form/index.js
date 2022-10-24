@@ -1,7 +1,7 @@
 import {registerBlockType} from "@wordpress/blocks";
 import {useBlockProps} from "@wordpress/block-editor";
-import block from "./block.json";
 import './main.css'
+import block from "./block.json";
 import icons from "../../icons";
 
 registerBlockType(block.name, {

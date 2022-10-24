@@ -1,9 +1,9 @@
 import {registerBlockType} from '@wordpress/blocks'
-import block from './block.json'
 import {RichText, useBlockProps, InspectorControls} from '@wordpress/block-editor'
 import {PanelBody, ColorPalette} from '@wordpress/components'
 import {__} from '@wordpress/i18n'
 import './main.css'
+import block from './block.json'
 import icons from "../../icons";
 
 registerBlockType(block.name, {
