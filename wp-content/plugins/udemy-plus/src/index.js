@@ -4,14 +4,14 @@ import {RichText} from '@wordpress/block-editor'
 import {__} from '@wordpress/i18n'
 
 registerBlockType(block.name, {
-    edit(props) {
-        console.dir(props)
+    edit({attributes, setAttributes}) {
+        console.dir(attributes)
         return <RichText
             tagName="h2"
             placeholder={__('Enter Heading', 'udemy-plus')}
-            value={props.attributes.content}
+            value={attributes.content}
             onChange={(newValue, oldValue) => {
-                props.setAttributes({ content: newValue})
+                setAttributes({ content: newValue})
             }
             }
         />
