@@ -7,7 +7,8 @@ import icons from "../../icons";
 
 registerBlockType(block.name, {
     icon: icons.primary,
-    edit() {
+    edit({attributes, setAttributes}) {
+        const {bgColor, textColor} = attributes;
         const blockProps = useBlockProps();
         return (<div {...blockProps}>
             <h1>Search: Your search term here</h1>
