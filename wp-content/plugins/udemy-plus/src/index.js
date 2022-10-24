@@ -9,6 +9,11 @@ registerBlockType(block.name, {
         return <RichText
             tagName="h2"
             placeholder={__('Enter Heading', 'udemy-plus')}
+            value={props.attributes.content}
+            onChange={(newValue, oldValue) => {
+                props.setAttributes({ content: newValue})
+            }
+            }
         />
     }
 })
