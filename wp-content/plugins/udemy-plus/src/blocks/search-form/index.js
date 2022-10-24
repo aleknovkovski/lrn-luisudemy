@@ -1,4 +1,4 @@
-import { registerBlockType } from "@wordpress/blocks";
+import {registerBlockType} from "@wordpress/blocks";
 import block from "./block.json";
 import './main.css'
 import icons from "../../icons";
