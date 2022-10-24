@@ -4,7 +4,8 @@ import {RichText} from '@wordpress/block-editor'
 import {__} from '@wordpress/i18n'
 
 registerBlockType(block.name, {
-    edit() {
+    edit(props) {
+        console.dir(props)
         return <RichText
             tagName="h2"
             placeholder={__('Enter Heading', 'udemy-plus')}
