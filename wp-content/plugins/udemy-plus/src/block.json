@@ -8,5 +8,6 @@
   "description": "Add a header with a hover effect",
   "keywords": [ "header", "underline", "hover"],
   "version": "1.0.0",
-  "textdomain": "udemy-plus"
+  "textdomain": "udemy-plus",
+  "editorScript": "file:./index.js"
 }
