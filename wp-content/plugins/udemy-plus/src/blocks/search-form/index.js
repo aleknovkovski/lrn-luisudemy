@@ -7,6 +7,7 @@ import icons from "../../icons";
 
 registerBlockType(block.name, {
     icon: icons.primary,
+    
     edit({attributes, setAttributes}) {
         const {bgColor, textColor} = attributes;
         const blockProps = useBlockProps();
