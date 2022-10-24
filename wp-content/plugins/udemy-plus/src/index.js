@@ -1,6 +1,7 @@
 import {registerBlockType} from '@wordpress/blocks'
 import block from './block.json'
 import {RichText, useBlockProps, InspectorControls} from '@wordpress/block-editor'
+import {PanelBody} from '@wordpress/components'
 import {__} from '@wordpress/i18n'
 import './main.css'
 
@@ -11,7 +12,9 @@ registerBlockType(block.name, {
 
         return (<>
             <InspectorControls>
-                Dummy Content
+                <PanelBody title={__('Colors', 'udemy-plus')}>
+                    Dummy Content
+                </PanelBody>
             </InspectorControls>
             <div {...blockProps}>
                 <RichText
