@@ -15,6 +15,10 @@
     "content": {
       "type": "string",
       "default": "my text"
+    },
+    "underline_color": {
+      "type": "string",
+      "default": "#f87171"
     }
   }
 }
