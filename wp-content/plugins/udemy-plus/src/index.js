@@ -14,13 +14,10 @@ registerBlockType(block.name, {
             <InspectorControls>
                 <PanelBody title={__('Colors', 'udemy-plus')}>
                     <ColorPalette
-                        colors={[
-                            { name: 'Red', color: '#f87171'},
-                            { name: 'Indigo', color: '#818cf8'}
-                        ]}
+                        colors={[{name: 'Red', color: '#f87171'}, {name: 'Indigo', color: '#818cf8'}]}
                         value={underline_color}
                         onChange={newVal => {
-                            setAttributes({ 'underline_color': newVal })
+                            setAttributes({'underline_color': newVal})
                         }}
                     />
                 </PanelBody>
@@ -39,15 +36,20 @@ registerBlockType(block.name, {
             </div>
         </>)
     }, save({attributes}) {
-        const {content} = attributes
+        const {content, underline_color} = attributes
         const blockProps = useBlockProps.save({
-            className: 'fancy-header'
+            className: 'fancy-header', style: {
+                'background-image': `
+           linear-gradient(transparent, transparent),
+           linear-gradient(${underline_color}, ${underline_color})
+           `
+            }
         })
 
         return (<RichText.Content
-                {...blockProps}
-                tagName="h2"
-                value={content}
-            />)
+            {...blockProps}
+            tagName="h2"
+            value={content}
+        />)
     }
 })
