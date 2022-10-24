@@ -10,5 +10,14 @@
   "textdomain": "udemy-plus",
   "editorScript": "file:./index.js",
   "style": "file:./index.css",
-  "attributes": {}
+  "attributes": {
+    "bgColor": {
+      "type": "string",
+      "default": "#F87171"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#fff"
+    }
+  }
 }
