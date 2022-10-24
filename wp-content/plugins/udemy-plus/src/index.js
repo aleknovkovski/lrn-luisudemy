@@ -8,7 +8,7 @@ registerBlockType(block.name, {
     edit({attributes, setAttributes}) {
         const {content} = attributes
         const blockProps = useBlockProps()
-        console.dir(attributes)
+
         return (<>
             <InspectorControls>
                 Dummy Content
