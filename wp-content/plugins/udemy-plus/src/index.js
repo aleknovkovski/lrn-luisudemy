@@ -5,11 +5,13 @@ import {__} from '@wordpress/i18n'
 
 registerBlockType(block.name, {
     edit({attributes, setAttributes}) {
+        const { content } = attributes
         console.dir(attributes)
+
         return <RichText
             tagName="h2"
             placeholder={__('Enter Heading', 'udemy-plus')}
-            value={attributes.content}
+            value={content}
             onChange={(newValue, oldValue) => {
                 setAttributes({ content: newValue})
             }
