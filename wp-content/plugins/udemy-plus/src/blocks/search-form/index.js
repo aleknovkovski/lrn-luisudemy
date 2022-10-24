@@ -5,11 +5,9 @@ import block from "./block.json";
 import icons from "../../icons";
 
 registerBlockType(block.name, {
-    icon: icons.primary,
-    edit() {
+    icon: icons.primary, edit() {
         const blockProps = useBlockProps();
-        return (
-            <div {...blockProps}>
+        return (<div {...blockProps}>
                 <h1>Search: Your search term here</h1>
                 <form>
                     <input type="text" placeholder="Search"/>
@@ -17,7 +15,6 @@ registerBlockType(block.name, {
                         <button type="submit">Search</button>
                     </div>
                 </form>
-            </div>
-        );
+            </div>);
     },
 });
