@@ -12,6 +12,7 @@ registerBlockType(block.name, {
 
         return <div {...blockProps}>
             <RichText
+                allowedFormats={ ['core/bold', 'core/italic'] }
                 className="fancy-header"
                 tagName="h2"
                 placeholder={__('Enter Heading', 'udemy-plus')}
