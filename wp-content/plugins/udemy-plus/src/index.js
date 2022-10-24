@@ -2,6 +2,7 @@ import { registerBlockType } from '@wordpress/blocks'
 import block from './block.json'
 import {RichText, useBlockProps} from '@wordpress/block-editor'
 import {__} from '@wordpress/i18n'
+import './main.css'
 
 registerBlockType(block.name, {
     edit({attributes, setAttributes}) {

@@ -10,6 +10,7 @@
   "version": "1.0.0",
   "textdomain": "udemy-plus",
   "editorScript": "file:./index.js",
+  "style": "file:./index.css",
   "attributes": {
     "content": {
       "type": "string",
