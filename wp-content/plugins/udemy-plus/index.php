@@ -18,6 +18,7 @@ if(!function_exists('add_action')) {
 }
 
 // Setup
+define('UP_PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 // Includes
 
