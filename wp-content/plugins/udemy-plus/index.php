@@ -16,3 +16,9 @@ if(!function_exists('add_action')) {
 	echo "Not much I can do... I'm just a plugin file";
 	exit;
 }
+
+// Setup
+
+// Includes
+
+// Hooks
