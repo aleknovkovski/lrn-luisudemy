@@ -7,18 +7,20 @@ import icons from "../../icons";
 
 registerBlockType(block.name, {
     icon: icons.primary,
-    
+
     edit({attributes, setAttributes}) {
         const {bgColor, textColor} = attributes;
         const blockProps = useBlockProps();
-        return (<div {...blockProps}>
-            <h1>Search: Your search term here</h1>
-            <form>
-                <input type="text" placeholder="Search"/>
-                <div className="btn-wrapper">
-                    <button type="submit">Search</button>
-                </div>
-            </form>
-        </div>);
+        return (<>
+            <div {...blockProps}>
+                <h1>Search: Your search term here</h1>
+                <form>
+                    <input type="text" placeholder="Search"/>
+                    <div className="btn-wrapper">
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </>);
     },
 });
