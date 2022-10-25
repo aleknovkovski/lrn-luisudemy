@@ -8,7 +8,10 @@ function up_search_form_render_cb($atts): string {
 	ob_start();
 	?>
     <div class="wp-block-udemy-plus-search-form" style="<?= $styleAttr?>">
-        <h1>Search: <?php the_search_query(); ?></h1>
+        <h1>
+		    <?php esc_html_e('Search', 'udemy-plus'); ?>:
+		    <?php the_search_query(); ?>
+        </h1>
         <form action="<?php echo esc_url(home_url('/')); ?>">
             <input
                 type="text"
