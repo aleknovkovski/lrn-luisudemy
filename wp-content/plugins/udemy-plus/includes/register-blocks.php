@@ -3,7 +3,9 @@
 function up_register_blocks() {
 	$blocks = [
 		['name' => 'fancy-header'],
-		['name' => 'search-form'] // <~ NEW BLOCK
+		['name' => 'search-form', 'options' => [
+			'render_callback' => 'up_search_form_render_cb'
+		]]
 	];
 	foreach($blocks as $block) {
 		register_block_type(
