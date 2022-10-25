@@ -1,8 +1,5 @@
 import { registerBlockType } from '@wordpress/blocks';
-import {
-    useBlockProps,
-    RichText
-} from '@wordpress/block-editor';
+import {useBlockProps, RichText} from '@wordpress/block-editor';
 import { __ } from "@wordpress/i18n";
 import icons from '../../icons.js'
 import './main.css'
