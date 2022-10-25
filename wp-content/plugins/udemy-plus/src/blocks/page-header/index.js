@@ -25,12 +25,18 @@ registerBlockType('udemy-plus/page-header', {
                 </InspectorControls>
                 <div { ...blockProps }>
                     <div className="inner-page-header">
-                        <RichText
-                            tagName="h1"
-                            placeholder={ __('Heading', 'udemy-plus') }
-                            value={ content }
-                            onChange={ newVal => setAttributes({ content: newVal })}
-                        />
+                        {
+                        showCategory ? (
+                                <h1>{__("Category: Some Category", "udemy-plus")}</h1>
+                            ) : (
+                                <RichText
+                                    tagName="h1"
+                                    placeholder={ __('Heading', 'udemy-plus') }
+                                    value={ content }
+                                    onChange={ newVal => setAttributes({ content: newVal })}
+                                />
+                            )
+                        }
                     </div>
                 </div>
             </>
