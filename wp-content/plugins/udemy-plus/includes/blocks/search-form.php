@@ -9,8 +9,12 @@ function up_search_form_render_cb($atts): string {
 	?>
     <div class="wp-block-udemy-plus-search-form" style="<?= $styleAttr?>">
         <h1>Search: Your search term here</h1>
-        <form>
-            <input type="text" placeholder="Search"/>
+        <form action="<?php echo esc_url(home_url('/')); ?>">
+            <input
+                type="text"
+                placeholder="Search"/
+                name="s"
+            >
             <div class="btn-wrapper">
                 <button type="submit" style="<?= $styleAttr?>">Search</button>
             </div>
