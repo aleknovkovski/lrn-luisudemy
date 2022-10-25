@@ -7,18 +7,15 @@ function up_search_form_render_cb($atts): string {
 
 	ob_start();
 	?>
-	<div {...blockProps}>
-		<h1>Search: Your search term here</h1>
-		<form>
-			<input type="text" placeholder="Search" />
-			<div className="btn-wrapper">
-				<button type="submit" style={{
-				"background-color": bgColor,
-				color: textColor
-				}}>Search</button>
-			</div>
-		</form>
-	</div>
+    <div class="wp-block-udemy-plus-search-form" style="<?= $styleAttr?>">
+        <h1>Search: Your search term here</h1>
+        <form>
+            <input type="text" placeholder="Search"/>
+            <div class="btn-wrapper">
+                <button type="submit" style="<?= $styleAttr?>">Search</button>
+            </div>
+        </form>
+    </div>
 	<?php
 	$output = ob_get_contents();
 	ob_end_clean();
