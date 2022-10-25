@@ -20,6 +20,11 @@ registerBlockType('udemy-plus/page-header', {
                             label={__("Show Category", "udemy-plus")}
                             checked={showCategory}
                             onChange={(showCategory) => setAttributes({ showCategory })}
+                            help={
+                                showCategory
+                                    ? __("Category Shown.", "udemy-plus")
+                                    : __("Custom Content Shown", "udemy-plus")
+                            }
                         />
                     </PanelBody>
                 </InspectorControls>
