@@ -14,6 +14,15 @@ registerBlockType('udemy-plus/page-header', {
 
         return (
             <>
+                <InspectorControls>
+                    <PanelBody title={__("General", "udemy-plus")}>
+                        <ToggleControl
+                            label={__("Show Category", "udemy-plus")}
+                            checked={showCategory}
+                            onChange={(showCategory) => setAttributes({ showCategory })}
+                        />
+                    </PanelBody>
+                </InspectorControls>
                 <div { ...blockProps }>
                     <div className="inner-page-header">
                         <RichText
