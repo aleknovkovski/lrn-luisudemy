@@ -12,6 +12,23 @@ registerBlockType(block.name, {
         const {bgColor, textColor} = attributes;
         const blockProps = useBlockProps();
         return (<>
+            <InspectorControls>
+                <PanelColorSettings
+                    title={__("Color Settings")}
+                    colorSettings={[
+                        {
+                            label: __("Background Color", "udemy-plus"),
+                            value: bgColor,
+                            onChange: (newVal) => setAttributes({bgColor: newVal}),
+                        },
+                        {
+                            label: __("Text Color", "udemy-plus"),
+                            value: textColor,
+                            onChange: (newVal) => setAttributes({textColor: newVal}),
+                        },
+                    ]}
+                />
+            </InspectorControls>
             <div {...blockProps}>
                 <h1>Search: Your search term here</h1>
                 <form>
