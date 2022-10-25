@@ -12,6 +12,19 @@ registerBlockType('udemy-plus/page-header', {
         const { content, showCategory } = attributes;
         const blockProps = useBlockProps();
 
+        const richTextMarkup = (
+            <RichText
+                tagName="h1"
+                placeholder={ __('Heading', 'udemy-plus') }
+                value={ content }
+                onChange={ newVal => setAttributes({ content: newVal })}
+            />
+        )
+
+        const showCategoryMarkup = (
+            <h1>{__("Category: Some Category", "udemy-plus")}</h1>
+        )
+
         return (
             <>
                 <InspectorControls>
@@ -30,18 +43,7 @@ registerBlockType('udemy-plus/page-header', {
                 </InspectorControls>
                 <div { ...blockProps }>
                     <div className="inner-page-header">
-                        {
-                        showCategory ? (
-                                <h1>{__("Category: Some Category", "udemy-plus")}</h1>
-                            ) : (
-                                <RichText
-                                    tagName="h1"
-                                    placeholder={ __('Heading', 'udemy-plus') }
-                                    value={ content }
-                                    onChange={ newVal => setAttributes({ content: newVal })}
-                                />
-                            )
-                        }
+                        {showCategory ? showCategoryMarkup : richTextMarkup}
                     </div>
                 </div>
             </>
