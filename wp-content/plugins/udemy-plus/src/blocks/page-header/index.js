@@ -19,7 +19,7 @@ registerBlockType('udemy-plus/page-header', {
                             tagName="h1"
                             placeholder={ __('Heading', 'udemy-plus') }
                             value={ content }
-                            onChange={ content => setAttributes({ content })}
+                            onChange={ newVal => setAttributes({ content: newVal })}
                         />
                     </div>
                 </div>
