@@ -14,7 +14,12 @@ registerBlockType('udemy-plus/page-header', {
         return (
             <>
                 <div { ...blockProps }>
-                    Page Header
+                    <RichText
+                        tagName="h1"
+                        placeholder={ __('Heading', 'udemy-plus') }
+                        value={ content }
+                        onChange={ content => setAttributes({ content })}
+                    />
                 </div>
             </>
         );
