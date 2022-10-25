@@ -6,6 +6,7 @@ import './main.css'
 
 registerBlockType('udemy-plus/page-header', {
     icon: icons.primary,
+
     edit() {
         const blockProps = useBlockProps();
 
