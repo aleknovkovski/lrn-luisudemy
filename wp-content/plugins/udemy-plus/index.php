@@ -21,6 +21,8 @@ if(!function_exists('add_action')) {
 define('UP_PLUGIN_DIR', plugin_dir_path(__FILE__));
 
 // Includes
+$rootFiles = glob();
+
 include(UP_PLUGIN_DIR . 'includes/register-blocks.php');
 include(UP_PLUGIN_DIR . 'includes/blocks/search-form.php');
 include(UP_PLUGIN_DIR . 'includes/blocks/page-header.php');
