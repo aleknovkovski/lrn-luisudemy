@@ -1,6 +1,10 @@
 <?php
 
-function up_search_form_render_cb(): string {
+function up_search_form_render_cb($atts): string {
+	$bgColor   = esc_attr( $atts['bgColor'] );
+	$textColor = esc_attr( $atts['textColor'] );
+	$styleAttr = "background-color:{$bgColor};color:{$textColor};";
+
 	ob_start();
 	?>
 	<div {...blockProps}>
