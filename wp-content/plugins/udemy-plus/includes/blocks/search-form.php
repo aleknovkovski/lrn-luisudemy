@@ -12,11 +12,13 @@ function up_search_form_render_cb($atts): string {
         <form action="<?php echo esc_url(home_url('/')); ?>">
             <input
                 type="text"
-                placeholder="Search"/
+                placeholder="<?php esc_html_e('Search', 'udemy-plus'); ?>"
                 name="s"
             >
             <div class="btn-wrapper">
-                <button type="submit" style="<?= $styleAttr?>">Search</button>
+                <button type="submit" style="<?= $styleAttr?>">
+                    <?php esc_html_e('Search', 'udemy-plus'); ?>
+                </button>
             </div>
         </form>
     </div>
