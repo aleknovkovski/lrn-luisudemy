@@ -27,6 +27,16 @@ registerBlockType('udemy-plus/header-tools', {
                             ]}
                             onChange={(newVal) => setAttributes({ showAuth: newVal === "true" })}
                         />
+                        <CheckboxControl
+                            label={__("Show Login/Register Link", "udemy-plus")}
+                            help={
+                                showAuth
+                                    ? __("Showing Link", "udemy-plus")
+                                    : __("Hiding Link", "udemy-plus")
+                            }
+                            checked={showAuth}
+                            onChange={(showAuth) => setAttributes({ showAuth })}
+                        />
                     </PanelBody>
                 </InspectorControls>
                 <div { ...blockProps }>
