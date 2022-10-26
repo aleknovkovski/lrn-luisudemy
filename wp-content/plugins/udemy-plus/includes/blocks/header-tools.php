@@ -1,6 +1,6 @@
 <?php
 
-function up_header_tools($atts) {
+function up_header_tools_render_cb($atts) {
 	ob_start(); ?>
 
 	<div class="wp-block-udemy-plus-header-tools">
