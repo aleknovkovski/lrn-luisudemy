@@ -26,8 +26,8 @@ registerBlockType('udemy-plus/header-tools', {
                                 { label: __("Yes", "udemy-plus"), value: true },
                             ]}
                             onChange={(newVal) => {
-                                setAttributes({ showAuth: newVal})
-                                console.log(typeof newVal) // returns string instead of boolean!
+                                setAttributes({ showAuth: newVal === "true"})
+                                console.log(typeof newVal) // now returns a boolean
                             }
                             }
                         />
