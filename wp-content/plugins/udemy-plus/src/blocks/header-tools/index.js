@@ -18,7 +18,14 @@ registerBlockType('udemy-plus/header-tools', {
             <>
                 <InspectorControls>
                     <PanelBody title={ __('General', 'udemy-plus') }>
-                        Panel Body Content
+                        <SelectControl
+                            label={__("Show Login/Register Link", "udemy-plus")}
+                            value={showAuth}
+                            options={[
+                                { label: __("No", "udemy-plus"), value: false },
+                                { label: __("Yes", "udemy-plus"), value: true },
+                            ]}
+                        />
                     </PanelBody>
                 </InspectorControls>
                 <div { ...blockProps }>
