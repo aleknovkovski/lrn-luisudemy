@@ -12,6 +12,9 @@ function up_register_blocks() {
 		['name' => 'header-tools', 'options' => [
 			'render_callback' => 'up_header_tools_render_cb'
 		]],
+		['name' => 'auth-modal', 'options' => [
+			'render_callback' => 'up_auth_modal_render_cb'
+		]],
 	];
 	foreach($blocks as $block) {
 		register_block_type(
