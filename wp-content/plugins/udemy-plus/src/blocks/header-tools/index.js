@@ -1,6 +1,6 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody } from '@wordpress/components';
+import { PanelBody, SelectControl } from "@wordpress/components";
 import { __ } from '@wordpress/i18n';
 import icons from '../../icons.js'
 import './main.css'
@@ -9,8 +9,10 @@ registerBlockType('udemy-plus/header-tools', {
     icon: {
         src: icons.primary
     },
+
     edit({ attributes, setAttributes }) {
         const blockProps = useBlockProps();
+        const { showAuth } = attributes;
 
         return (
             <>
