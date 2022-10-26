@@ -25,11 +25,7 @@ registerBlockType('udemy-plus/header-tools', {
                                 { label: __("No", "udemy-plus"), value: false },
                                 { label: __("Yes", "udemy-plus"), value: true },
                             ]}
-                            onChange={(newVal) => {
-                                setAttributes({ showAuth: newVal === "true"})
-                                console.log(typeof newVal) // now returns a boolean
-                            }
-                            }
+                            onChange={(newVal) => setAttributes({ showAuth: newVal === "true" })}
                         />
                     </PanelBody>
                 </InspectorControls>
