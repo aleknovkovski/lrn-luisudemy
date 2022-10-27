@@ -21,12 +21,14 @@ function up_auth_modal_render_cb($atts) {
                             <i class="bi bi-key"></i>Sign in
                         </a>
                     </li>
+	                <?php if($atts['showRegister']) { ?>
                     <!-- Register Tab -->
-                    <li>
-                        <a href="#signup-tab">
-                            <i class="bi bi-person-plus-fill"></i>Sign up
-                        </a>
-                    </li>
+                        <li>
+                            <a href="#signup-tab">
+                                <i class="bi bi-person-plus-fill"></i>Sign up
+                            </a>
+                        </li>
+	                <?php } ?>
                 </ul>
                 <div class="modal-body">
                     <!-- Login Form -->
@@ -42,6 +44,7 @@ function up_auth_modal_render_cb($atts) {
                             <button type="submit">Sign in</button>
                         </fieldset>
                     </form>
+	                <?php if($atts['showRegister']) { ?>
                     <!-- Register Form -->
                     <form id="signup-tab">
                         <div id="signup-status"></div>
@@ -58,6 +61,7 @@ function up_auth_modal_render_cb($atts) {
                             <button type="submit">Sign up</button>
                         </fieldset>
                     </form>
+	            <?php } ?>
                 </div>
             </div>
         </div>
