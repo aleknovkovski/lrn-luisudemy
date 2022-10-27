@@ -1,1 +1,3 @@
-alert("Frontend js loaded, yay!")
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("test");
+});
