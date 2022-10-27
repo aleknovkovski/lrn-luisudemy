@@ -28,4 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const tabs = document.querySelectorAll(".tabs a");
     const signinForm = document.querySelector("#signin-tab");
     const signupForm = document.querySelector("#signup-tab");
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", (event) => {
+            tabs.forEach((currentTab) => currentTab.classList.remove("active-tab"))
+            event.currentTarget.classList.add("active-tab");
+        });
+    });
 });
