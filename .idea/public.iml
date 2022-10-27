@@ -12,6 +12,8 @@
       <excludeFolder url="file://$MODULE_DIR$/wp-admin" />
       <excludeFolder url="file://$MODULE_DIR$/wp-includes" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/fakerpress" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wordpress-beta-tester" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/twentytwentythree" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
