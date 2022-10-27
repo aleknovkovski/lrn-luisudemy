@@ -17,7 +17,16 @@ registerBlockType('udemy-plus/auth-modal', {
             <>
                 <InspectorControls>
                     <PanelBody title={ __('General', 'udemy-plus') }>
-
+                        <ToggleControl
+                            label={__("Show Register", "udemy-plus")}
+                            help={
+                                showRegister
+                                    ? __("Showing Registration Form.", "udemy-plus")
+                                    : __("Hiding Registration Form", "udemy-plus")
+                            }
+                            checked={showRegister}
+                            onChange={(showRegister) => setAttributes({ showRegister })}
+                        />
                     </PanelBody>
                 </InspectorControls>
                 <div { ...blockProps }>
