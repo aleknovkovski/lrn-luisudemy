@@ -24,4 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
             modalEl.classList.remove('modal-show')
         }
     })
+
+    const tabs = document.querySelectorAll(".tabs a");
+    const signinForm = document.querySelector("#signin-tab");
+    const signupForm = document.querySelector("#signup-tab");
 });
