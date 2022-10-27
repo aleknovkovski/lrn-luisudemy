@@ -10,4 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
             modalEl.classList.add('modal-show')
         })
     })
+
+    modalCloseEl.forEach((el) => {
+        el.addEventListener('click', (event)=> {
+            event.preventDefault()
+
+            modalEl.classList.remove('modal-show')
+        })
+    })
+
+    document.addEventListener("keydown", (e)=>{
+        if(e.key === "Escape") {
+            modalEl.classList.remove('modal-show')
+        }
+    })
 });
