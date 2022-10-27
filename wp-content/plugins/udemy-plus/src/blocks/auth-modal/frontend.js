@@ -35,6 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             tabs.forEach((currentTab) => currentTab.classList.remove("active-tab"))
             event.currentTarget.classList.add("active-tab");
+
+            const activeTab = event.currentTarget.getAttribute("href");
+            if (activeTab === "#signin-tab") {
+                signinForm.style.display = "block";
+                signupForm.style.display = "none";
+            } else {
+                signinForm.style.display = "none";
+                signupForm.style.display = "block";
+            }
         });
     });
 });
