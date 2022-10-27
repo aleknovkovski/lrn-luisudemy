@@ -13,6 +13,7 @@
 /wp-includes/
 /wp-content/plugins/gutenberg/
 /wp-content/plugins/fakerpress/
+/wp-content/plugins/wordpress-beta-tester/
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
