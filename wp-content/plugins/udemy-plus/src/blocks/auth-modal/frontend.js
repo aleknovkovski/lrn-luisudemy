@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     openModalBtn.forEach((el)=> {
         el.addEventListener('click', (event)=> {
+            event.preventDefault()
+
             modalEl.classList.add('modal-show')
         })
     })
