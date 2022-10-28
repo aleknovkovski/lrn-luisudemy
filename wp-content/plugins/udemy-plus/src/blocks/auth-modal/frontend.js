@@ -75,5 +75,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const responseJSON = await response.json();
+
+        if (responseJSON.status === 2) {
+            signupStatus.innerHTML = `
+            <div class="modal-status modal-status-success">
+            Success! Your account has been created.
+            </div>
+            `;
+            location.reload();
+        } else {
+            signupFieldset.removeAttribute("disabled");
+            signupStatus.innerHTML = `
+            <div class="modal-status modal-status-danger">
+            Unable to create account! Please try again later.
+            </div>
+            `;
+        }
+
     });
 });
