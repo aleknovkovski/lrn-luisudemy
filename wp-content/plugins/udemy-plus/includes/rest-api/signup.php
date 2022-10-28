@@ -26,6 +26,12 @@ function up_rest_api_signup_handler($request) {
 		return $response;
 	}
 
+	$userID = wp_insert_user([
+		'user_login' => $username,
+		'user_pass' => $password,
+		'user_email' => $email
+	]);
+
 	$response['status'] = 2;
 	return $response;
 }
