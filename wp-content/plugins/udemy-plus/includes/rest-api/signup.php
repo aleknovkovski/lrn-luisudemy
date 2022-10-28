@@ -17,11 +17,11 @@ function up_rest_api_signup_handler($request) {
 	$username = sanitize_text_field($params['username']);
 	$password = sanitize_text_field($params['password']);
 
-	if(
-		username_exists($username) ||
-		!is_email($email) ||
-		email_exists($email)
-	) {
+	$usernameExists = username_exists($username);
+	$notAnEmail = !is_email($email);
+	$emailExists = email_exists($email);
+
+	if( $usernameExists || $notAnEmail || $emailExists ) {
 		return $response;
 	}
 
