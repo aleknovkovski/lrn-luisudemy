@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    signupForm.addEventListener("submit", (event) => {
+    signupForm.addEventListener("submit", async(event) => {
         event.preventDefault();
 
         const signupFieldset = signupForm.querySelector("fieldset");
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             password: signupForm.querySelector('#su-password').value
         }
 
-        const response = fetch(up_auth_rest.signup, {
+        await fetch(up_auth_rest.signup, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
