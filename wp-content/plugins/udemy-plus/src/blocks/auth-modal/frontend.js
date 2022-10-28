@@ -59,5 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
         Please wait! We are creating your account.
         </div>
         `;
+
+        const formData = {
+            username: signupForm.querySelector('#su-name').value,
+            email: signupForm.querySelector('#su-email').value,
+            password: signupForm.querySelector('#su-password').value
+        }
     });
 });
