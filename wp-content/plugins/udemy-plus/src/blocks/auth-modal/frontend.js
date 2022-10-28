@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             password: signupForm.querySelector('#su-password').value
         }
 
-        await fetch(up_auth_rest.signup, {
+        const response = await fetch(up_auth_rest.signup, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
