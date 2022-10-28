@@ -38,6 +38,9 @@ function up_rest_api_signup_handler($request) {
 
 	wp_new_user_notification($userID, null, 'user');
 
+	wp_set_current_user($userID);
+	wp_set_auth_cookie($userID);
+
 	$response['status'] = 2;
 	return $response;
 }
