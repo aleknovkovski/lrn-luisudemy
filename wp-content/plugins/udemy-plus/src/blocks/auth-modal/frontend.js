@@ -73,5 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             body: JSON.stringify(formData),
         });
+
+        const responseJSON = await response.json();
     });
 });
