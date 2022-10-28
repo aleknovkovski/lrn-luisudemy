@@ -32,6 +32,10 @@ function up_rest_api_signup_handler($request) {
 		'user_email' => $email
 	]);
 
+	if (is_wp_error($userID)) {
+		return $response; //$userID will be a wp_error if something went wrong
+	}
+
 	$response['status'] = 2;
 	return $response;
 }
