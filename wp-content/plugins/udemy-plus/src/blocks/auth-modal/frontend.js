@@ -65,5 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
             email: signupForm.querySelector('#su-email').value,
             password: signupForm.querySelector('#su-password').value
         }
+
+        const response = fetch(up_auth_rest.signup, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        });
     });
 });
