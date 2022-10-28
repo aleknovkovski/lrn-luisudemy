@@ -36,6 +36,8 @@ function up_rest_api_signup_handler($request) {
 		return $response; //$userID will be a wp_error if something went wrong
 	}
 
+	wp_new_user_notification($userID, null, 'user');
+
 	$response['status'] = 2;
 	return $response;
 }
