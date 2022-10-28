@@ -22,7 +22,6 @@ function up_rest_api_signup_handler($request) {
 	$emailExists = email_exists($email);
 
 	if( $usernameExists || $notAnEmail || $emailExists ) {
-		$response['status'] = "2: Either the username or email is duplicate, or the email is in the wrong format";
 		return $response;
 	}
 
