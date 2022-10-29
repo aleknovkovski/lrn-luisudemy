@@ -15,11 +15,15 @@ function up_rest_api_signin_handler($request) {
 		return $response;
 	}
 
-	wp_signon([
+	$user = wp_signon([
 		'user_login' => $email,
 		'user_password' => $password,
 		'remember' => true
 	]);
+
+	if (is_wp_error($user)) {
+		return $response;
+	}
 
 	$response['status'] = 2;
 	return $response;
