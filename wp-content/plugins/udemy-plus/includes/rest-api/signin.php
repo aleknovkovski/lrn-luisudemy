@@ -8,6 +8,9 @@ function up_rest_api_signin_handler($request) {
 	$userLoginIsEmpty = empty($params['user_login']);
 	$passwordIsEmpty = empty($params['password']);
 
+	$email = sanitize_email($params['user_login']);
+	$password = sanitize_text_field($params['password']);
+
 	if($valuesNotSet || $userLoginIsEmpty || $passwordIsEmpty) {
 		return $response;
 	}
