@@ -1,7 +1,11 @@
 <?php
 
 function up_auth_modal_render_cb($atts) {
-	ob_start(); ?>
+	if(is_user_logged_in()) {
+     return '';
+    }
+
+    ob_start(); ?>
 
     <div class="wp-block-udemy-plus-auth-modal">
         <div class="modal-container">
