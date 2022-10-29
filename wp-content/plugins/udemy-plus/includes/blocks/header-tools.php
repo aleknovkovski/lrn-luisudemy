@@ -1,6 +1,10 @@
 <?php
 
 function up_header_tools_render_cb($atts) {
+
+	$user = wp_get_current_user();
+	$name = $user->exists() ? $user->user_login : 'Sign in';
+
 	ob_start(); ?>
 
 	<?php if($atts['showAuth']) { ?>
