@@ -30,6 +30,7 @@ function up_recipe_post_type() {
 
 	$args = array(
 		'description'        => __('A custom post type for recipes', 'udemy-plus'),
+		'show_in_rest'       => true,
 		'labels'             => $labels,
 		'public'             => true,
 		'publicly_queryable' => true,
