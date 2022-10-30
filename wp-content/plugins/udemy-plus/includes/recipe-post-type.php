@@ -34,14 +34,14 @@ function up_recipe_post_type() {
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'book' ),
+		'query_var'          => true, // ?recipe=pizza
+		'rewrite'            => array( 'slug' => 'recipe' ), // /recipe/pizza
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
-		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+		'menu_position'      => 20,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
 	);
 
-	register_post_type( 'book', $args );
+	register_post_type( 'recipe', $args );
 }
