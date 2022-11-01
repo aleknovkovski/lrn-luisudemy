@@ -16,3 +16,7 @@ function up_cuisine_add_form_fields() {
 	</div>
 	<?php
 }
+
+function up_cuisine_edit_form_fields( $term ) {
+
+}
