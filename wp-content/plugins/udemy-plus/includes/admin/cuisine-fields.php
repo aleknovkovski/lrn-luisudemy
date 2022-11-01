@@ -18,5 +18,5 @@ function up_cuisine_add_form_fields() {
 }
 
 function up_cuisine_edit_form_fields( $term ) {
-
+	$url = get_term_meta( $term->term_id, "more_info_url", true );
 }
