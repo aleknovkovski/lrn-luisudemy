@@ -21,7 +21,7 @@ registerBlockType('udemy-plus/recipe-summary', {
 
         useSelect(() => {
             console.log("useSelect() called");
-        }, []);
+        }, [termIDs]);
 
         return (
             <>
