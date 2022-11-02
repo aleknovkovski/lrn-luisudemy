@@ -8,10 +8,11 @@ registerBlockType('udemy-plus/recipe-summary', {
     icon: {
         src: icons.primary
     },
-    edit({ attributes, setAttributes }) {
+    edit({ attributes, setAttributes, context }) {
+        const { postId } = context
         const { prepTime, cookTime, course } = attributes;
         const blockProps = useBlockProps();
-
+        console.log(postId)
         return (
             <>
                 <div {...blockProps}>
