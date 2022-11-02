@@ -13,7 +13,12 @@ registerBlockType('udemy-plus/recipe-summary', {
         const { postId } = context
         const { prepTime, cookTime, course } = attributes;
         const blockProps = useBlockProps();
-        console.log(postId)
+
+        const [termIDs] = useEntityProp(
+            "postType", "recipe", "cuisine", postId
+        )
+        console.log(termIDs)
+
         return (
             <>
                 <div {...blockProps}>
