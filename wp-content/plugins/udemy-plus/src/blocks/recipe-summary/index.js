@@ -1,5 +1,6 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { useEntityProp } from "@wordpress/core-data";
 import { __ } from '@wordpress/i18n';
 import icons from '../../icons.js';
 import './main.css';
