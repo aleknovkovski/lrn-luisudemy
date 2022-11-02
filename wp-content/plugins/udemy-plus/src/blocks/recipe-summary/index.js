@@ -19,6 +19,10 @@ registerBlockType('udemy-plus/recipe-summary', {
             "postType", "recipe", "cuisine", postId
         )
 
+        useSelect(() => {
+            console.log("useSelect() called");
+        }, []);
+
         return (
             <>
                 <div {...blockProps}>
