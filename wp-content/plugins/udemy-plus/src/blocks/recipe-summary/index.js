@@ -20,7 +20,7 @@ registerBlockType('udemy-plus/recipe-summary', {
         )
 
         useSelect((select) => {
-            console.log(select('core'))
+            const { getEntityRecords } = select('core')
         }, [termIDs]);
 
         return (
