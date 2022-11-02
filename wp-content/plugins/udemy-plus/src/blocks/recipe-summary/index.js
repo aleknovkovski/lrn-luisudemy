@@ -1,6 +1,7 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { useEntityProp } from "@wordpress/core-data";
+import { useSelect } from "@wordpress/data";
 import { __ } from '@wordpress/i18n';
 import icons from '../../icons.js';
 import './main.css';
@@ -17,7 +18,6 @@ registerBlockType('udemy-plus/recipe-summary', {
         const [termIDs] = useEntityProp(
             "postType", "recipe", "cuisine", postId
         )
-        console.log(termIDs)
 
         return (
             <>
