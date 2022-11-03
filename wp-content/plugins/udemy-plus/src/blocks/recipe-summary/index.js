@@ -1,3 +1,4 @@
+import Rating from "@mui/material/Rating/index.js";
 import { registerBlockType } from '@wordpress/blocks';
 import { Spinner } from "@wordpress/components";
 import { useBlockProps, RichText } from '@wordpress/block-editor';
@@ -109,6 +110,7 @@ registerBlockType('udemy-plus/recipe-summary', {
                         <div className="recipe-metadata">
                             <div className="recipe-title">{__('Rating', 'udemy-plus')}</div>
                             <div className="recipe-data">
+                                <Rating value={rating} readOnly />
                             </div>
                             <i className="bi bi-hand-thumbs-up"></i>
                         </div>
