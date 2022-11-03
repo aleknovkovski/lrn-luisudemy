@@ -75,6 +75,15 @@ registerBlockType('udemy-plus/recipe-summary', {
                             <div className="recipe-metadata">
                                 <div className="recipe-title">{__('Cuisine', 'udemy-plus')}</div>
                                 <div className="recipe-data recipe-cuisine">
+                                    {
+                                        cuisines && cuisines.map((term)=> {
+                                            return (
+                                                <>
+                                                    <a href={term.meta.more_info_url}>{term.name}</a>
+                                                </>
+                                            );
+                                        })
+                                    }
                                 </div>
                             </div>
                             <i className="bi bi-egg-fried"></i>
