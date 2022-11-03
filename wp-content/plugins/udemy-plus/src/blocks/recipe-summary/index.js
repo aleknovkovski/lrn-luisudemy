@@ -1,4 +1,5 @@
 import { registerBlockType } from '@wordpress/blocks';
+import { Spinner } from "@wordpress/components";
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { useEntityProp } from "@wordpress/core-data";
 import { useSelect } from "@wordpress/data";
@@ -82,7 +83,7 @@ registerBlockType('udemy-plus/recipe-summary', {
                             <div className="recipe-metadata">
                                 <div className="recipe-title">{__('Cuisine', 'udemy-plus')}</div>
                                 <div className="recipe-data recipe-cuisine">
-                                    {isLoading && "Is loading..."}
+                                    {isLoading && <Spinner />}
                                     {
                                         !isLoading && cuisines && cuisines.map((term, index) => {
                                             const comma = cuisines[index + 1] ? ", " : "";
