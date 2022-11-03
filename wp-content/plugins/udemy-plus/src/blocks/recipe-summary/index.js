@@ -76,7 +76,8 @@ registerBlockType('udemy-plus/recipe-summary', {
                                 <div className="recipe-title">{__('Cuisine', 'udemy-plus')}</div>
                                 <div className="recipe-data recipe-cuisine">
                                     {
-                                        cuisines && cuisines.map((term)=> {
+                                        cuisines && cuisines.map((term, index) => {
+                                            const comma = cuisines[index + 1] ? ", " : "";
                                             return (
                                                 <>
                                                     <a href={term.meta.more_info_url}>{term.name}</a>
