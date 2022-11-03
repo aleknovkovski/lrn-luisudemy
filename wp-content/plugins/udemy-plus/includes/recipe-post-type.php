@@ -42,7 +42,7 @@ function up_recipe_post_type() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => 20,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields' )
 	);
 
 	register_post_type( 'recipe', $args );
