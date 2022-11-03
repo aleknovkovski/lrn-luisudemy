@@ -81,6 +81,7 @@ registerBlockType('udemy-plus/recipe-summary', {
                                             return (
                                                 <>
                                                     <a href={term.meta.more_info_url}>{term.name}</a>
+                                                    {comma}
                                                 </>
                                             );
                                         })
