@@ -28,9 +28,12 @@ registerBlockType('udemy-plus/recipe-summary', {
             ]
 
             const fetchedCuisines = getEntityRecords(...taxonomyReqArgs)
+            const cuisinesIsLoading = isResolving('getEntityRecords', taxonomyReqArgs)
 
-            return {cuisines: fetchedCuisines};
-
+            return {
+                cuisines: fetchedCuisines,
+                isLoading: cuisinesIsLoading
+            };
         }, [termIDs]);
 
         console.log(cuisines)
