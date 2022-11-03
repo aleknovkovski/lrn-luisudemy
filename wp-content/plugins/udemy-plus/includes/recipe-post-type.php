@@ -60,4 +60,12 @@ function up_recipe_post_type() {
 		'default' => '#',
 		'show_in_rest' => true,
 	]);
+
+	register_post_meta('recipe', 'recipe_rating', [
+		'type' => 'number',
+		'description' => 'The rating for a recipe',
+		'single' => true,
+		'default' => 0,
+		'show_in_rest' => true,
+	]);
 }
