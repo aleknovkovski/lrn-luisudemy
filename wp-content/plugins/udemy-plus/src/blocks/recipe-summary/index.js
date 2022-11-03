@@ -82,8 +82,9 @@ registerBlockType('udemy-plus/recipe-summary', {
                             <div className="recipe-metadata">
                                 <div className="recipe-title">{__('Cuisine', 'udemy-plus')}</div>
                                 <div className="recipe-data recipe-cuisine">
+                                    {isLoading && "Is loading..."}
                                     {
-                                        cuisines && cuisines.map((term, index) => {
+                                        !isLoading && cuisines && cuisines.map((term, index) => {
                                             const comma = cuisines[index + 1] ? ", " : "";
                                             return (
                                                 <>
