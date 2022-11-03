@@ -20,7 +20,7 @@ registerBlockType('udemy-plus/recipe-summary', {
         )
 
         const { cuisines } = useSelect((select) => {
-            const { getEntityRecords } = select('core')
+            const { getEntityRecords, isResolving } = select('core')
             const fetchedCuisines = getEntityRecords("taxonomy", "cuisine", {
                 include: termIDs,
             })
