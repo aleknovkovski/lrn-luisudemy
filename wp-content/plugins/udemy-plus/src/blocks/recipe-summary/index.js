@@ -19,7 +19,7 @@ registerBlockType('udemy-plus/recipe-summary', {
             "postType", "recipe", "cuisine", postId
         )
 
-        const { cuisines } = useSelect((select) => {
+        const { cuisines, isLoading } = useSelect((select) => {
             const { getEntityRecords, isResolving } = select('core')
             const taxonomyReqArgs = [
                 "taxonomy",
