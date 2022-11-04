@@ -53,7 +53,7 @@ function up_recipe_summary_render_cb($atts, $content, $block) {
                         <?php _e('Cuisine', 'udemy-plus'); ?>
                     </div>
                     <div class="recipe-data recipe-cuisine">
-
+	                    <?php echo $cuisines; ?>
                     </div>
                 </div>
                 <i class="bi bi-egg-fried"></i>
