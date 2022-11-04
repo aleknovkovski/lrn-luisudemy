@@ -11,10 +11,14 @@ function up_activate_plugin(){
 	up_recipe_post_type();
 	flush_rewrite_rules();
 
-	$sql = "CREATE TABLE wp_recipe_ratings (
-	ID bigint(20) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	post_id bigint(20) unsigned NOT NULL,
-	user_id bigint(20) unsigned NOT NULL,
-	rating decimal(3,2) unsigned NOT NULL
-	) ENGINE='InnoDB' COLLATE 'utf8mb4_unicode_ci'";
+	global $wpdb;
+	$tableName = "{$wpdb->prefix}recipe_ratings";
+	$charsetCollate = $wpdb->get_charset_collate();
+
+	$sql = "CREATE TABLE {$tableName} (
+		ID bigint(20) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		post_id bigint(20) unsigned NOT NULL,
+		user_id bigint(20) unsigned NOT NULL,
+		rating decimal(3,2) unsigned NOT NULL
+	) ENGINE='InnoDB' {$charsetCollate}";
 }
