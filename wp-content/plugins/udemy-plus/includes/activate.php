@@ -22,5 +22,6 @@ function up_activate_plugin(){
 		rating decimal(3,2) unsigned NOT NULL
 	) ENGINE='InnoDB' {$charsetCollate}";
 
+	require(ABSPATH . "/wp-admin/includes/upgrade.php");
 	dbDelta($sql);
 }
