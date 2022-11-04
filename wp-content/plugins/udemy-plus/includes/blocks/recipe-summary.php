@@ -78,7 +78,7 @@ function up_recipe_summary_render_cb($atts, $content, $block) {
                 <div class="recipe-data" id="recipe-rating"
                      data-post-id="<?php echo $postID; ?>"
                      data-avg-rating="<?php echo $rating; ?>"
-                     data-logged-in="<?php echo is_user_logged_in(); ?>">
+                     data-logged-in="<?php echo is_user_logged_in(); ?>"
                      data-rating-count="<?php echo $ratingCount; ?>">
                 </div>
                 <i class="bi bi-hand-thumbs-up"></i>
