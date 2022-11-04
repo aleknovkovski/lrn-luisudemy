@@ -6,6 +6,7 @@ function up_recipe_summary_render_cb($atts, $content, $block) {
     $course = isset( $atts['course']) ? esc_html($atts['course']) : '';
 
 	$postID = $block->context['postId'];
+	$postTerms = get_the_terms($postID, 'cuisine');
 
     ob_start();
     ?>
