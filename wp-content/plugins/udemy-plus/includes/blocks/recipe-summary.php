@@ -10,7 +10,7 @@ function up_recipe_summary_render_cb($atts, $content, $block) {
 	$postTerms = is_array($postTerms) ? $postTerms : [];
 
 	$cuisines = '';
-	foreach ($postTerms as $term) {
+	foreach ($postTerms as $key => $term) {
 		$url = get_term_meta($term->term_id, 'more_info_url', true);
 		$cuisines .= "<a href='{$url}' target='_blank'>{$term->name}</a>";
 	}
