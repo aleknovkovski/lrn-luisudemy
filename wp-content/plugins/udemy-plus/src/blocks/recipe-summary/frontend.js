@@ -7,6 +7,7 @@ function RecipeRating(props) {
     return <Rating
         value={avgRating}
         precision={0.5}
+        onChange={ () => alert("Changeed!")}
     />;
 }
 
