@@ -1,9 +1,11 @@
 <?php
 
-function up_recipe_summary_render_cb($atts) {
+function up_recipe_summary_render_cb($atts, $content, $block) {
     $prepTime = isset( $atts['prepTime']) ? esc_html($atts['prepTime']) : '';
     $cookTime = isset( $atts['cookTime']) ? esc_html($atts['cookTime']) : '';
     $course = isset( $atts['course']) ? esc_html($atts['course']) : '';
+
+	$postID = $block->context['postId'];
 
     ob_start();
     ?>
