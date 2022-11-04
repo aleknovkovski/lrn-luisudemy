@@ -1,10 +1,16 @@
-import { render, useState } from '@wordpress/element'
+import { render, useState, useEffect } from '@wordpress/element'
 import Rating from "@mui/material/Rating/index.js";
 import apiFetch from '@wordpress/api-fetch';
 
 function RecipeRating(props) {
     const [avgRating, setAvgRating] = useState(props.avgRating);
     const [permission, setPermission] = useState(props.loggedIn);
+
+    useEffect(() => {
+        if (props.ratingCount) {
+            setPermission(false);
+        }
+    }, []);
 
     return <Rating
         value={avgRating}
