@@ -3,11 +3,18 @@ import Rating from "@mui/material/Rating/index.js";
 
 function RecipeRating(props) {
     const [avgRating, setAvgRating] = useState(props.avgRating);
+    const [permission, setPermission] = useState(props.loggedIn);
 
     return <Rating
         value={avgRating}
         precision={0.5}
-        onChange={ () => alert("Changeed!")}
+        onChange={ () => {
+            if (!permission) {
+                alert("No Permission to change!")
+            } else {
+                alert("Permitted to change!")
+            }
+        }}
     />;
 }
 
