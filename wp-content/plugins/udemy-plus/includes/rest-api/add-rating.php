@@ -23,6 +23,16 @@ function up_rest_api_rating_handler($request) {
 		$postID, $userID
 	));
 
+	$wpdb->insert(
+		"{$wpdb->prefix}recipe_ratings",
+		[
+			'post_id' => $postID,
+			'rating' => $rating,
+			'user_id' => $userID
+		],
+		['%d', '%f', '%d']
+	);
+
 	$response['status'] = 2;
 	return $response;
 }
