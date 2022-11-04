@@ -16,6 +16,12 @@ function up_rest_api_rating_handler($request) {
 	$postID = absint($params['postID']);
 	$userID = get_current_user_id();
 
+	global $wpdb;
+	$wpdb->get_results(
+		"SELECT * FROM {$wpdb->prefix}recipe_ratings
+		WHERE post_id={$postID} AND user_id={$userID}"
+	);
+
 	$response['status'] = 2;
 	return $response;
 }
