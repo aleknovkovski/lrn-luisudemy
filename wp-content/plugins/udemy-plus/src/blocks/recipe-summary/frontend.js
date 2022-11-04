@@ -9,7 +9,7 @@ function RecipeRating(props) {
     return <Rating
         value={avgRating}
         precision={0.5}
-        onChange={ async () => {
+        onChange={ async (event, rating) => {
             if (!permission) {
                 alert("You have already rated this recipe, or you may need to login")
             } else {
@@ -17,7 +17,11 @@ function RecipeRating(props) {
                 await apiFetch({
                     // will go to yourdomain.com/wp-json/up/v1/rate
                     path: 'up/v1/rate',
-                    method: 'POST'
+                    method: 'POST',
+                    data: {
+                        postID: props.postID,
+                        rating: rating
+                    }
                 })
             }
             setPermission(false);
