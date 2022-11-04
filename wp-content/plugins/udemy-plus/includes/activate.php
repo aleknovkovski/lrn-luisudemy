@@ -21,4 +21,6 @@ function up_activate_plugin(){
 		user_id bigint(20) unsigned NOT NULL,
 		rating decimal(3,2) unsigned NOT NULL
 	) ENGINE='InnoDB' {$charsetCollate}";
+
+	dbDelta($sql);
 }
