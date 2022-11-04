@@ -18,6 +18,7 @@
     }
   },
   "editorScript": "file:./index.js",
+  "viewScript": "file:./frontend.js",
   "style": "file:./index.css",
   "usesContext": ["postId"]
 }
