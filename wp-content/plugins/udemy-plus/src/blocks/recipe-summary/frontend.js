@@ -1,7 +1,9 @@
 import { render, useState } from '@wordpress/element'
 
 function RecipeRating(props) {
-    return props.avgRating
+    const [avgRating, setAvgRating] = useState(props.avgRating);
+
+    return avgRating
 }
 
 document.addEventListener("DOMContentLoaded", () => {
