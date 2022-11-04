@@ -33,6 +33,13 @@ function up_rest_api_rating_handler($request) {
 		['%d', '%f', '%d']
 	);
 
+	$avgRating = round($wpdb->get_var($wpdb->prepare(
+		"SELECT AVG(`rating`)
+		FROM {$wpdb->prefix}recipe_ratings
+		WHERE post_id=%d",
+		$postID
+		)), 1);
+
 	$response['status'] = 2;
 	return $response;
 }
