@@ -10,10 +10,11 @@ function RecipeRating(props) {
         precision={0.5}
         onChange={ () => {
             if (!permission) {
-                alert("No Permission to change!")
+                alert("You have already rated this recipe, or you may need to login")
             } else {
                 alert("Permitted to change!")
             }
+            setPermission(false);
         }}
     />;
 }
