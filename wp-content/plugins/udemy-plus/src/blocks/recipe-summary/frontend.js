@@ -1,9 +1,13 @@
 import { render, useState } from '@wordpress/element'
+import Rating from "@mui/material/Rating/index.js";
 
 function RecipeRating(props) {
     const [avgRating, setAvgRating] = useState(props.avgRating);
 
-    return avgRating
+    return <Rating
+        value={avgRating}
+        precision={0.5}
+    />;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
