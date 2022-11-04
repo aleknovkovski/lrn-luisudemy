@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             postID={postID}
             avgRating={avgRating}
             loggedIn={loggedIn}
+            ratingCount={ratingCount}
         />
         , block);
 });
