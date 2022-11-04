@@ -1,7 +1,7 @@
 import { render } from '@wordpress/element'
 
-function RecipeRating() {
-    return "Rendered by REACT"
+function RecipeRating(props) {
+    return props.avgRating
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,5 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(postID, avgRating, loggedIn);
 
     render(
-        <RecipeRating/>, block);
+        <RecipeRating
+            postID={postID}
+            avgRating={avgRating}
+            loggedIn={loggedIn}
+        />
+        , block);
 });
