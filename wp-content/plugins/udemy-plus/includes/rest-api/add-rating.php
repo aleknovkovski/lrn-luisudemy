@@ -17,10 +17,11 @@ function up_rest_api_rating_handler($request) {
 	$userID = get_current_user_id();
 
 	global $wpdb;
-	$wpdb->get_results(
+	$wpdb->get_results($wpdb->prepare(
 		"SELECT * FROM {$wpdb->prefix}recipe_ratings
-		WHERE post_id={$postID} AND user_id={$userID}"
-	);
+		WHERE post_id=%d AND user_id=%d",
+		$postID, $userID
+	));
 
 	$response['status'] = 2;
 	return $response;
