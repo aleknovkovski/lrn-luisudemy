@@ -40,6 +40,8 @@ function up_rest_api_rating_handler($request) {
 		$postID
 		)), 1);
 
+	update_post_meta($postID, 'recipe_rating', $avgRating);
+
 	$response['status'] = 2;
 	return $response;
 }
