@@ -12,6 +12,9 @@ function up_rest_api_rating_handler($request) {
 		return $response;
 	}
 
+	$rating = round(floatval($params['rating']), 1);
+	$postID = absint($params['postID']);
+
 	$response['status'] = 2;
 	return $response;
 }
